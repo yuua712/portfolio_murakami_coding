@@ -11,7 +11,7 @@
     <header id="header">
         <div class="header__inner">
             <h1>
-                <a href="./index.html">Murakami Yuua</a>
+                <a class="aaa" href="./index.html">Murakami Yuua</a>
             </h1>
             <nav class="header__nav">
                 <ul>
@@ -28,7 +28,7 @@
             一緒に良いものを作り上げます。
         </p>
         <picture>
-            <img src="./images/mainvisual.png" alt="波打ち際">
+            <img src="./images/mainvisual.png" alt="波打ち際の写真">
         </picture>
     </header>
     <section id="about">
@@ -40,7 +40,10 @@
             <div class="profile">
                 <p class="profile__name">村上友愛</p>
                 <p class="profile__text">1998年7月、札幌出身。4年制大学卒業後、東京にて2年間受付業務に従事。2023年春頃に札幌へ戻り、同年8月にプログラミングの勉強を始める。2024年1月、オンラインスクール「デザスタ」に入学、コーディング・webデザインについて学ぶ。趣味は漫画・アニメ鑑賞、コスプレ、カラオケ。</p>
-                <p class="profile__view">view more</p>
+                <a class="view__more" href="./about.html">
+                    <p>view more</p>
+                    <img src="./images/arrow.png" alt="矢印">
+                </a>
             </div>
         </div>
     </section>
@@ -53,14 +56,20 @@
             <div class="works01__text">
                 <p class="works01__banner">Banner</p>
                 <p class="works01__title">01.スマホプラン広告</p>
-                <p class="works01__view">view more</p>
+                <a class="arrow__works--left" href="./works/works1.html">
+                    <img src="./images/arrow-left.png" alt="矢印">
+                    <p>view more</p>
+                </a>
             </div>
         </div>
         <div class="works02">
             <div class="works02__text">
                 <p class="works02__banner">Banner</p>
                 <p class="works02__title">02.旅行支援アプリ広告</p>
-                <p class="works02__view">view more</p>
+                <a class="arrow__works--right" href="./works/works2.html">
+                    <p>view more</p>
+                    <img src="./images/arrow.png" alt="矢印">
+                </a>
             </div>
             <div class="works02__picture">
                 <img src="./images/works2.png" alt="旅行支援アプリ広告">
@@ -73,47 +82,59 @@
             <div class="works03__text">
                 <p class="works03__banner">Banner</p>
                 <p class="works03__title">03.ハンバーガー広告</p>
-                <p class="works03__view">view more</p>
+                <a class="arrow__works--left" href="./works/works3.html">
+                    <img src="./images/arrow-left.png" alt="矢印">
+                    <p>view more</p>
+                </a>
             </div>
         </div>
         <div class="works04">
             <div class="works04__text">
                 <p class="works04__website">Web site</p>
                 <p class="works04__title">04.コワーキングスペースWebサイト</p>
-                <p class="works04__view">view more</p>
+                <a class="arrow__works--right" href="./works/works4.html">
+                    <p>view more</p>
+                    <img src="./images/arrow.png" alt="矢印">
+                </a>
             </div>
             <div class="works04__picture">
-                <img src="./images/works4.png" alt="コワーキングスペースWebサイト">
+                <img src="./images/works4.png" alt="コワーキングスペースウェブサイト">
             </div>
         </div>
         <div class="works05">
             <div class="works05__picture">
-                <img src="./images/works5.png" alt="美容室Webサイト">
+                <img src="./images/works5.png" alt="美容室ウェブサイト">
             </div>
             <div class="works05__text">
                 <p class="works05__website">Web site</p>
                 <p class="works05__title">05.美容室Webサイト</p>
-                <p class="works05__view">view more</p>
+                <a class="arrow__works--left" href="./works/works5.html">
+                    <img src="./images/arrow-left.png" alt="矢印">
+                    <p>view more</p>
+                </a>
             </div>
         </div>
         <div class="works06">
             <div class="works06__text">
                 <p class="works06__website">Web site</p>
                 <p class="works06__title">06.CafeWebサイト</p>
-                <p class="works06__view">view more</p>
+                <a class="arrow__works--right" href="./works/works6.html">
+                    <p>view more</p>
+                    <img src="./images/arrow.png" alt="矢印">
+                </a>
             </div>
             <div class="works06__picture">
-                <img src="./images/works6.png" alt="CafeWebサイト">
+                <img src="./images/works6.png" alt="カフェウェブサイト">
             </div>
         </div>
     </section>
     <section id="contact">
         <h2>Contact</h2>
         <p class="contact__word">ご依頼やご相談等お気軽にお問い合わせ下さいませ。</p>
-        <form>
+        <form action="">
             <div class="contact__name">
                 <p>Name</p>
-                <input>
+                <input type="text" name="samplename" required>
             </div>
             <div class="contact__mailadress">
                 <p>Mail Adress</p>
@@ -142,6 +163,5 @@
     <div class="top">
         <a href="./index.html">Back to top</a>
     </div>
-    
 </body>
 </html>
