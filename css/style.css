@@ -9,6 +9,7 @@
 /* -------------------index.html-------------------------- */
 body {
     background-color: #040505;
+    overflow-x: hidden;
 }
 
 /* header */
@@ -23,6 +24,13 @@ body {
     width: 100%;
 }
 
+.header__inner a:hover {
+    background: rgb(203,155,116);
+    background: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .header__nav ul {
     display: flex;
     gap: 60px;
@@ -33,7 +41,7 @@ body {
     font-family: "myfont",serif;
 }
 
-.header__nav li:hover {
+.header__nav a:hover {
     background: rgb(203,155,116);
     background: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%);
     -webkit-background-clip: text;
@@ -86,6 +94,16 @@ body {
     font-size: 18px;
 }
 
+.profile__all {
+    display: flex;
+    align-items: baseline;
+}
+
+.profile__name--en {
+    font-family: "myfont",serif;
+    padding-left: 10px;
+}
+
 .profile__text {
     text-align: justify;
 }
@@ -113,6 +131,8 @@ body {
     background: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%)1;
 }
 
 /* works */
@@ -132,6 +152,10 @@ body {
 
 .works01 {
     display: flex;
+}
+
+.works01__sp {
+    display: none;
 }
 
 .works01__text {
@@ -198,11 +222,13 @@ body {
     align-items: center;
 }
 
-.arrow__works--right:hover {
+.works01__text a:hover {
     background: rgb(203,155,116);
     background: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%)1;
 }
 
 .arrow__works--left {
@@ -212,11 +238,13 @@ body {
     align-items: center;
 }
 
-.arrow__works--left:hover {
+.works02__text a:hover {
     background: rgb(203,155,116);
     background: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%)1;
 }
 
 .works03 {
@@ -246,6 +274,15 @@ body {
     border-bottom: 1px solid #fff;
     width: 100px;
     text-align: right;
+}
+
+.works03__text a:hover {
+    background: rgb(203,155,116);
+    background: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%)1;
 }
 
 .works04 {
@@ -279,6 +316,15 @@ body {
     float: right;
 }
 
+.works04__text a:hover {
+    background: rgb(203,155,116);
+    background: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%)1;
+}
+
 .works05 {
     display: flex;
     padding-top: 120px;
@@ -306,6 +352,15 @@ body {
     border-bottom: 1px solid #fff;
     width: 100px;
     text-align: right;
+}
+
+.works05__text a:hover {
+    background: rgb(203,155,116);
+    background: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%)1;
 }
 
 .works06 {
@@ -339,6 +394,15 @@ body {
     float: right;
 }
 
+.works06__text a:hover {
+    background: rgb(203,155,116);
+    background: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%)1;
+}
+
 /* contact */
 #contact {
     max-width: 1000px;
@@ -359,42 +423,26 @@ body {
 }
 
 form {
-    padding: 60px 0;
+    padding: 60px 10px;
     max-width: 900px;
     margin: 0 auto;
 }
 
-form p {
-    font-size: 18px;
-    font-family: "myfont",serif;
-}
-
 .contact__name {
     display: flex;
-    justify-content: center;
     padding-bottom: 50px;
 }
 
 .contact__mailadress {
     display: flex;
-    justify-content: center;
     padding-bottom: 50px;
 }
 
 .contact__message {
     display: flex;
-    justify-content: center;
 }
 
-.contact__name p {
-    width: 20%;
-}
-
-.contact__mailadress p {
-    width: 20%;
-}
-
-.contact__message p {
+form label {
     width: 20%;
 }
 
@@ -403,10 +451,22 @@ form input {
     padding: 20px 0;
 }
 
+form input:focus {
+    outline: none;
+    border: 4px solid;
+    border-image: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%)1;
+}
+
 form textarea {
     width: 80%;
     height: 8em;
     padding: 30px 0;
+}
+
+form textarea:focus {
+    outline: none;
+    border: 4px solid;
+    border-image: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%)1;
 }
 
 .contact__send {
@@ -420,6 +480,15 @@ form textarea {
     border-color: #fff;
     font-size: 18px;
     font-family: "FOT-筑紫Aオールド明朝 Pr6N L",serif;
+}
+
+.contact__send input:hover {
+    background: rgb(203,155,116);
+    background: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 1px solid;
+    border-image: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%)1;
 }
 
 /* footer */
@@ -463,6 +532,13 @@ form textarea {
     font-family: "myfont",serif;
 }
 
+.footer a:hover {
+    background: rgb(203,155,116);
+    background: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 /* backtotop */
 .top a {
     border: 1px solid #fff;
@@ -478,6 +554,8 @@ form textarea {
     background: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    border: 1px solid;
+    border-image: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%)1;
 }
 
 /* -------------------about.html-------------------------- */
@@ -486,7 +564,7 @@ form textarea {
 }
 
 .about__under img {
-    width: 570px;
+    width: 60%;
     display: block;
     padding-top: 200px;
     margin: 0 auto;
@@ -514,24 +592,40 @@ form textarea {
 }
 
 .biography__item {
-    width: 300px;
+    width: 360px;
 }
 
 .biography__list {
     display: table-cell;
-    padding: 0 30px;
 }
 
 .biography__time {
     padding-bottom: 10px;
+    padding-left: 25px;
 }
 
 .biography__title {
     padding-bottom: 30px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.biography__title::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 35px;
+    height: 50px;
+    width: 1px;
+    background-color: #fff;
 }
 
 .biography__text {
-    padding-top: 30px;
+    padding: 0 25px;
+}
+
+.biography__line {
+    padding-right: 25px;
 }
 
 .biography__line::after {
@@ -542,10 +636,29 @@ form textarea {
     background-color: #fff;
 }
 
+/* 横スクロール */
+.scroll_container {
+    height: 500px;
+    padding: 0 20% !important;
+}
+
+.sticky_wrap {
+    position: relative;
+    width: 100%;
+    height: 700px;
+}
+
+.horizontal_scroll {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    display: flex;
+}
+
 /* skill */
 .skill h2 {
     font-size: 60px;
-    padding: 200px 0 100px 0;
+    padding: 300px 0 100px 0;
     text-align: center;
     font-family: "myfont",serif;
 }
@@ -553,6 +666,7 @@ form textarea {
 .skill__all {
     display: flex;
     justify-content: center;
+    padding: 0 10px;
 }
 
 .skill__title {
@@ -565,7 +679,6 @@ form textarea {
 }
 
 .skill__design img {
-    width: 400px;
     padding-bottom: 50px;
 }
 
@@ -574,7 +687,6 @@ form textarea {
 }
 
 .skill__coding img {
-    width: 400px;
     padding-bottom: 50px;
 }
 
@@ -589,6 +701,7 @@ form textarea {
 .interest {
     max-width: 1000px;
     margin: 0 auto;
+    padding: 0 10px;
 }
 
 .interest__title {
@@ -620,11 +733,18 @@ form textarea {
 
 /* -------------------works.html-------------------------- */
 /* worksbanner */
-.works__under {
-    display: flex;
+.works__main {
     max-width: 1000px;
     margin: 0 auto;
-    padding-top: 150px;
+}
+
+.works__main .works__img--banner {
+    width: 80%;
+}
+
+.works__under {
+    display: flex;
+    padding: 150px 10px 0 10px;
 }
 
 .works__under--sp {
@@ -655,6 +775,7 @@ form textarea {
 .under__text1 {
     width: 20%;
     line-height: 2.2;
+    word-break: keep-all;
 }
 
 .under__text2 {
@@ -667,6 +788,7 @@ form textarea {
     width: 20%;
     padding-top: 40px;
     line-height: 2.2;
+    word-break: keep-all;
 }
 
 .under__text4 {
@@ -677,18 +799,26 @@ form textarea {
 }
 
 .works__img--banner {
-    width: 800px;
     margin: 0 auto;
     display: block;
     padding-top: 150px;
 }
 
 .other__works {
-    padding-top: 100px;
+    margin-top: 100px;
     border-bottom: 1px solid #fff;
     float: right;
     align-items: center;
     display: flex;
+}
+
+.other__works:hover {
+    background: rgb(203,155,116);
+    background: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%)1;
 }
 
 .other__works p {
@@ -716,17 +846,17 @@ form textarea {
 }
 
 .img__luxury {
-    width: 450px;
+    width: 45%;
     padding: 0 10px;
 }
 
 .img__pop {
-    width: 450px;
+    width: 45%;
     padding: 0 10px;
 }
 
 .works__under--img {
-    width: 855px;
+    width: 85%;
     padding-top: 250px;
     display: block;
     margin: 0 auto;
@@ -740,18 +870,131 @@ form textarea {
 }
 
 .works__web--pc {
-    width: 600px;
+    width: 60%;
     padding: 0 10px;
 }
 
 .works__web--sp {
-    width: 300px;
+    width: 30%;
     padding: 0 10px;
 }
 
 .works__web5--pc {
-    width: 800px;
+    width: 80%;
     display: block;
     margin: 0 auto;
     padding-top: 150px;
+}
+
+@media screen and (max-width:767px) {
+    /* -------------------index.html-------------------------- */
+    .header__nav {
+        display: none;
+    }
+    .header__inner {
+        padding-top: 20px;
+    }
+    .header__inner h1 {
+        font-size: 22px;
+    }
+    #header p {
+        writing-mode: vertical-rl;
+        font-size: 16px;
+        line-height: 2.5;
+        padding-top: 300px;
+        padding-left: 50px;
+    }
+
+    /* about */
+    #about h2 {
+        padding-bottom: 50px;
+        font-size: 40px;
+    }
+
+    .profile {
+        width: 80%;
+        padding-left: 0;
+        margin: 0 auto;
+    }
+    .profile__name {
+        padding-bottom: 20px;
+    }
+    .about__profile {
+        flex-direction: column;
+    }
+    .profile__picture img {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+    .profile__text {
+        font-size: 14px;
+    }
+
+    .view__more {
+        padding-top: 50px;
+    }
+    .view__more p {
+        font-size: 14px;
+    }
+    .view__more img {
+        width: 20px;
+    }
+
+    /* works */
+    #works h2 {
+        padding-bottom: 50px;
+        font-size: 40px;
+    }
+
+    .works01 {
+        display: none;
+    }
+    .works01__sp {
+        display: block;
+    }
+    .works01__picture {
+        width: 40%;
+        margin: 0 auto;
+    }
+    .works02__picture {
+        width: 50%;
+        margin: 0 auto;
+    }
+    .works03__picture {
+        width: 60%;
+        margin: 0 auto;
+    }
+    .works01__title {
+        font-size: 18px;
+        display: table;
+        margin: 0 auto;
+        padding: 10px 0 80px 0;
+    }
+
+    .works02 {
+        display: none;
+    }
+    .works03 {
+        display: none;
+    }
+    .works04 {
+        display: none;
+    }
+    .works05 {
+        display: none;
+    }
+    .works06 {
+        display: none;
+    }
+
+    /* contact */
+    #contact h2 {
+        font-size: 40px;
+        padding-top: 120px;
+    }
+    .contact__word {
+        padding-top: 50px;
+        font-size: 14px;
+    }
 }

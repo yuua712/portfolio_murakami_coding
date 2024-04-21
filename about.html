@@ -6,6 +6,10 @@
     <title>PORTFOLIO</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/ScrollTrigger.min.js" defer></script>
+    <script src="./js/script.js"></script>
 </head>
 <body>
     <header id="header">
@@ -27,48 +31,52 @@
         <p class="about__under--name">村上友愛</p>
         <p class="about__under--text">作る側に興味を持ち、2023年夏頃からプログラミングの勉強を開始しました。一人で進めていくのに限界を感じ、2024年1月からオンラインスクール「デザスタ」でコーディング・Webデザインを学びました。現在はWebデザイナーを目指して転職活動中です。今までお客様と近い距離で関わるお仕事をしておりました。そこで培った傾聴力を生かして様々な可能性を見出し、見る方々の印象に残るようなものを作っていきたいです。</p>
     </div>
-    <div class="biography">
+    <div class="biography scroll_container">
         <h2>Biography</h2>
-        <ul class="biography__list">
-            <li class="biography__item">
-                <p class="biography__time">1998.07</p>
-                <p class="biography__title">生まれは帯広、その後札幌で育つ</p>
-                <span class="biography__line"></span>
-                <p class="biography__text">小さい頃から好奇心旺盛で興味を持ったらまずは挑戦するということを心掛けていた。</p>
-            </li>
-        </ul>
-        <ul class="biography__list">
-            <li class="biography__item">
-                <p class="biography__time">2021.04</p>
-                <p class="biography__title">大学卒業後、東京で働き始める</p>
-                <span class="biography__line"></span>
-                <p class="biography__text">この頃はまだ自分のやりたいことが見つかっておらず、模索していた。</p>
-            </li>
-        </ul>
-        <ul class="biography__list">
-            <li class="biography__item">
-                <p class="biography__time">2023.03</p>
-                <p class="biography__title">札幌へ戻る</p>
-                <span class="biography__line"></span>
-                <p class="biography__text">地元で働きたい思いが強くなり、札幌へ戻ることを決心。</p>
-            </li>
-        </ul>
-        <ul class="biography__list">
-            <li class="biography__item">
-                <p class="biography__time">2023.08</p>
-                <p class="biography__title">コーディングの勉強を始める</p>
-                <span class="biography__line"></span>
-                <p class="biography__text">作る側に興味を持つようになり、勉強を開始。</p>
-            </li>
-        </ul>
-        <ul class="biography__list">
-            <li class="biography__item">
-                <p class="biography__time">2024.01</p>
-                <p class="biography__title">「デザスタ」へ入学</p>
-                <span class="biography__line"></span>
-                <p class="biography__text">一人で勉強を進めていくのに厳しさを感じ、本格的にコーディング・Webデザインを学び始める。</p>
-            </li>
-        </ul>
+        <div class="sticky_wrap">
+            <div class="horizontal_scroll">
+                <ul class="biography__list">
+                    <li class="biography__item">
+                        <p class="biography__time">1998.07</p>
+                        <p class="biography__title">生まれは帯広、その後札幌で育つ</p>
+                        <span class="biography__line"></span>
+                        <p class="biography__text">小さい頃から好奇心旺盛で興味を持ったらまずは挑戦するということを心掛けていた。</p>
+                    </li>
+                </ul>
+                <ul class="biography__list">
+                    <li class="biography__item">
+                        <p class="biography__time">2021.04</p>
+                        <p class="biography__title">大学卒業後、東京で働き始める</p>
+                        <span class="biography__line"></span>
+                        <p class="biography__text">この頃はまだ自分のやりたいことが見つかっておらず、模索していた。</p>
+                    </li>
+                </ul>
+                <ul class="biography__list">
+                    <li class="biography__item">
+                        <p class="biography__time">2023.03</p>
+                        <p class="biography__title">札幌へ戻る</p>
+                        <span class="biography__line"></span>
+                        <p class="biography__text">地元で働きたい思いが強くなり、札幌へ戻ることを決心。</p>
+                    </li>
+                </ul>
+                <ul class="biography__list">
+                    <li class="biography__item">
+                        <p class="biography__time">2023.08</p>
+                        <p class="biography__title">コーディングの勉強を始める</p>
+                        <span class="biography__line"></span>
+                        <p class="biography__text">作る側に興味を持つようになり、勉強を開始。</p>
+                    </li>
+                </ul>
+                <ul class="biography__list">
+                    <li class="biography__item">
+                        <p class="biography__time">2024.01</p>
+                        <p class="biography__title">「デザスタ」へ入学</p>
+                        <span class="biography__line"></span>
+                        <p class="biography__text">一人で勉強を進めていくのに厳しさを感じ、本格的にコーディング・Webデザインを学び始める。</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
     <div class="skill">
         <h2>Skill</h2>
@@ -128,5 +136,29 @@
     <div class="top">
         <a href="./about.html">Back to top</a>
     </div>
+
+    <script>
+        $(document).ready(function() {
+            var $listWrapperEl=$(".sticky_wrap");
+            var $listEl=$(".horizontal_scroll");
+            gsap.to($listEl, {
+                x:function() {
+                    return-($listEl.width()-$listWrapperEl.width());
+                },
+                ease:"none",
+                scrollTrigger: {
+                    trigger:".scroll_container",
+                    start:"top top",
+                    end:function() {
+                        return "+=" + ($listEl.width() - $listWrapperEl.width());
+                    },
+                    scrub:true,
+                    pin:true,
+                    anticipatePin:1,
+                    invalidateOnRefresh:true,
+                },
+            });
+        });
+    </script>
 </body>
 </html>
