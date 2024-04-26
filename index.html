@@ -170,24 +170,41 @@
     </section>
     <section id="contact">
         <h2>Contact</h2>
-        <p class="contact__word">ご依頼やご相談等お気軽にお問い合わせ下さいませ。</p>
-        <form action="" method="post">
-            <div class="contact__name">
-                <label for="my__name">Name</label>
-                <input type="text" name="my__name" id="my__name">
+        <p class="contact__word">ご依頼やご相談等<wbr>お気軽にお問い合わせ下さいませ。</p>
+        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSejJQQ-kNL3mkt2gyGemF4zzasdZ8dToX45oV3KxoykhoeUIQ/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;" class="c-form">
+            <div class="c-form__item">
+                <label class="c-form__label" for="field-name">Name<span class="c-form__required"></span></label>
+                <input
+                    name="entry.295522153"
+                    class="c-form__input"
+                    id="field-name"
+                    type="text"
+                    required="required"
+                />
             </div>
-            <div class="contact__mailadress">
-                <label for="mail">Mail Adress</label>
-                <input id="mail" type="email" name="mail">
+            <div class="c-form__item">
+                <label class="c-form__label" for="field-mail">Mail Adress<span class="c-form__required"></span></label>
+                <input
+                    name="entry.959134782"
+                    class="c-form__input"
+                    id="field-mail"
+                    type="email"
+                    required="required"
+                />
             </div>
-            <div class="contact__message">
-                <label for="message">Message</label>
-                <textarea name="message" rows="20" cols="80" id="message"></textarea>
+            <div class="c-form__item">
+                <label class="c-form__label" for="field-message">Message<span class="c-form__required"></span></label>
+                <textarea
+                    name="entry.1279093345"
+                    class="c-form__input"
+                    id="field-message"
+                    required="required"
+                ></textarea>
+            </div>
+            <div class="c-form__submit">
+                <button type="submit">送信</button>
             </div>
         </form>
-        <div class="contact__send">
-            <input type="button" onclick="location.href='./contact.html'" value="送信">
-        </div>
     </section>
     <div class="footer">
         <p class="footer__logo">
@@ -203,5 +220,15 @@
     <div class="top">
         <a href="./index.html">Back to top</a>
     </div>
+
+    <script type="text/javascript">
+        let submitted = false;
+    </script>
+    <iframe
+        name="hidden_iframe"
+        id="hidden_iframe"
+        style="display: none"
+        onload="if(submitted){window.location='./contact.html';}"
+    ></iframe>
 </body>
 </html>
