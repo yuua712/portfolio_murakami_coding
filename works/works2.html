@@ -23,6 +23,18 @@
                 </ul>
             </nav>
         </div>
+        <div class="hamburger">
+            <span class="hamburger__menu">Menu</span>
+            <span class="hamburger__close">Close</span>
+            <span></span>
+        </div>
+        <nav class="header__nav--sp">
+            <ul>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#works">Works</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     <img class="works__img" src="../images/works2_under.png" alt="旅行支援アプリ広告">
     <div class="works__main">
@@ -109,5 +121,14 @@
     </div>
 
     <script src="../js/lightbox.min.js"></script>
+
+    <script>
+        $(function(){
+            $(".hamburger").on("click",function(){
+                $(".hamburger").toggleClass("open");
+                $(".header__nav--sp").fadeToggle();
+            });
+        });
+    </script>
 </body>
 </html>

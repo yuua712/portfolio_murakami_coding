@@ -62,6 +62,11 @@ body {
     letter-spacing: 0.4em;
 }
 
+.hamburger, 
+.header__nav--sp {
+    display: none;
+}
+
 /* about */
 #about {
     max-width: 1000px;
@@ -914,6 +919,74 @@ form textarea:focus {
         line-height: 2.5;
         padding-top: 300px;
         padding-left: 50px;
+    }
+    .header__inner {
+        z-index: 9999;
+    }
+    .hamburger {
+        display: block;
+        width: 40px;
+        height: 20px;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 9999;
+        cursor: pointer;
+    }
+    .hamburger__menu {
+        position: fixed;
+        font-size: 14px;
+        font-family: "myfont",serif;
+        text-align: center;
+        top: 30px;
+    }
+    .hamburger span {
+        position: fixed;
+        content: "";
+        width: 40px;
+        height: 1px;
+        background-color: #fff;
+        top: 20px;
+    }
+    .hamburger span::before {
+        position: fixed;
+        content: "";
+        width: 40px;
+        height: 1px;
+        background-color: #fff;
+        top: 41px;
+        right: 20px;
+    }
+    .hamburger__close {
+        display: none;
+    }
+    .open .hamburger__close {
+        display: block;
+        position: fixed;
+        font-size: 14px;
+        font-family: "myfont",serif;
+        text-align: center;
+    }
+    .open .hamburger__menu {
+        display: none;
+    }
+    .header__nav--sp {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #000000ec;
+    }
+    .header__nav--sp ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .header__nav--sp li {
+        line-height: 4;
+        font-size: 20px;
+        font-family: "myfont",serif;
     }
 
     /* about */

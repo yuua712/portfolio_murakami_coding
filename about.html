@@ -25,6 +25,18 @@
                 </ul>
             </nav>
         </div>
+        <div class="hamburger">
+            <span class="hamburger__menu">Menu</span>
+            <span class="hamburger__close">Close</span>
+            <span></span>
+        </div>
+        <nav class="header__nav--sp">
+            <ul>
+                <li><a href="./index.html#about">About</a></li>
+                <li><a href="./index.html#works">Works</a></li>
+                <li><a href="./index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     <div class="about__under">
         <img src="./images/about_profile2.png" alt="プロフィール写真">
@@ -142,6 +154,14 @@
         <a href="./about.html">Back to top</a>
     </div>
 
+    <script>
+        $(function(){
+            $(".hamburger").on("click",function(){
+                $(".hamburger").toggleClass("open");
+                $(".header__nav--sp").fadeToggle();
+            });
+        });
+    </script>
     <script>
         $(document).ready(function() {
             var $listWrapperEl=$(".sticky_wrap");
