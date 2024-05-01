@@ -100,9 +100,11 @@
             <a href="../images/works4_under_pc-100.jpg" data-lightbox="image-1" data-alt="コワーキングスペースウェブサイト">PC版はこちら</a>
             <a href="../images/works4_under_sp-100.jpg" data-lightbox="image-1" data-alt="コワーキングスペースウェブサイト">SP版はこちら</a>
         </div>
-        <div class="works4__img">
-            <img class="works__web--pc" src="../images/works4_under_pc-100.jpg" alt="コワーキングスペースウェブサイト">
-            <img class="works__web--sp" src="../images/works4_under_sp-100.jpg" alt="コワーキングスペースウェブサイト">
+        <div class="img-wrap">
+            <div class="works4__img">
+                <img class="works__web--pc" src="../images/works4_under_pc-100.jpg" alt="コワーキングスペースウェブサイト">
+                <img class="works__web--sp" src="../images/works4_under_sp-100.jpg" alt="コワーキングスペースウェブサイト">
+            </div>
         </div>
         <a class="other__works" href="../index.html#works">
             <p>other Works</p>
@@ -132,6 +134,25 @@
                 $(".hamburger").toggleClass("open");
                 $(".header__nav--sp").fadeToggle();
             });
+        });
+    </script>
+
+    <script>
+        const images = document.querySelectorAll('.img-wrap');
+        const animationClassName = 'img-animation';
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add(animationClassName);
+                } else {
+                    entry.target.classList.remove(animationClassName);
+                }
+            });
+        });
+
+        images.forEach((image) => {
+            observer.observe(image);
         });
     </script>
 </body>

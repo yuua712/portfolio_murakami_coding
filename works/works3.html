@@ -100,9 +100,11 @@
             <a href="../images/works3_under_luxury.png" data-lightbox="image-1" data-alt="ハンバーガー広告">高級感verはこちら</a>
             <a href="../images/works3_under_pop.png" data-lightbox="image-1" data-alt="ハンバーガー広告">POPverはこちら</a>
         </div>
-        <div class="works__img--burger">
-            <img class="img__luxury" src="../images/works3_under_luxury.png" alt="ハンバーガー広告">
-            <img class="img__pop" src="../images/works3_under_pop.png" alt="ハンバーガー広告">
+        <div class="img-wrap">
+            <div class="works__img--burger">
+                <img class="img__luxury" src="../images/works3_under_luxury.png" alt="ハンバーガー広告">
+                <img class="img__pop" src="../images/works3_under_pop.png" alt="ハンバーガー広告">
+            </div>
         </div>
         <a class="other__works" href="../index.html#works">
             <p>other Works</p>
@@ -132,6 +134,25 @@
                 $(".hamburger").toggleClass("open");
                 $(".header__nav--sp").fadeToggle();
             });
+        });
+    </script>
+
+    <script>
+        const images = document.querySelectorAll('.img-wrap');
+        const animationClassName = 'img-animation';
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add(animationClassName);
+                } else {
+                    entry.target.classList.remove(animationClassName);
+                }
+            });
+        });
+
+        images.forEach((image) => {
+            observer.observe(image);
         });
     </script>
 </body>

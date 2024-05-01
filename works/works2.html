@@ -99,7 +99,9 @@
         <div class="modal">
             <a href="../images/works2_under_banner.png" data-lightbox="image-1" data-alt="旅行支援アプリ広告">全画面はこちら</a>
         </div>
-        <img class="works__img--banner" src="../images/works2_under_banner.png" alt="旅行支援アプリ広告">
+        <div class="img-wrap">
+            <img class="works__img--banner" src="../images/works2_under_banner.png" alt="旅行支援アプリ広告">
+        </div>
         <a class="other__works" href="../index.html#works">
             <p>other Works</p>
             <img src="../images/arrow.png" alt="矢印">
@@ -128,6 +130,25 @@
                 $(".hamburger").toggleClass("open");
                 $(".header__nav--sp").fadeToggle();
             });
+        });
+    </script>
+
+    <script>
+        const images = document.querySelectorAll('.img-wrap');
+        const animationClassName = 'img-animation';
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add(animationClassName);
+                } else {
+                    entry.target.classList.remove(animationClassName);
+                }
+            });
+        });
+
+        images.forEach((image) => {
+            observer.observe(image);
         });
     </script>
 </body>

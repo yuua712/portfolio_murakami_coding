@@ -99,7 +99,9 @@
         <div class="modal">
             <a href="../images/works5_under_pc-100.jpg" data-lightbox="image-1" data-alt="美容室ウェブサイト">PC版はこちら</a>
         </div>
-        <img class="works__web5--pc" src="../images/works5_under_pc-100.jpg" alt="美容室ウェブサイト">
+        <div class="img-wrap">
+            <img class="works__web5--pc" src="../images/works5_under_pc-100.jpg" alt="美容室ウェブサイト">
+        </div>
         <a class="other__works" href="../index.html#works">
             <p>other Works</p>
             <img src="../images/arrow.png" alt="矢印">
@@ -128,6 +130,25 @@
                 $(".hamburger").toggleClass("open");
                 $(".header__nav--sp").fadeToggle();
             });
+        });
+    </script>
+
+    <script>
+        const images = document.querySelectorAll('.img-wrap');
+        const animationClassName = 'img-animation';
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add(animationClassName);
+                } else {
+                    entry.target.classList.remove(animationClassName);
+                }
+            });
+        });
+
+        images.forEach((image) => {
+            observer.observe(image);
         });
     </script>
 </body>

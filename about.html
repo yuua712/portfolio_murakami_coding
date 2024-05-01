@@ -10,6 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/ScrollTrigger.min.js" defer></script>
     <script src="./js/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 </head>
 <body>
     <header id="header">
@@ -38,14 +39,16 @@
             </ul>
         </nav>
     </header>
-    <div class="about__under">
-        <img src="./images/about_profile2.png" alt="プロフィール写真">
-        <div class="about__under--all">
-            <div class="about__profile--under">
-                <p class="about__under--name">村上友愛</p>
-                <p class="about__name__en">Yuua Murakami</p>
+    <div data-aos="fade-up" data-aos-duration="3000">
+        <div class="about__under">
+            <img src="./images/about_profile2.png" alt="プロフィール写真">
+            <div class="about__under--all">
+                <div class="about__profile--under">
+                    <p class="about__under--name">村上友愛</p>
+                    <p class="about__name__en">Yuua Murakami</p>
+                </div>
+                <p class="about__under--text">作る側に興味を持ち、2023年夏頃からプログラミングの勉強を開始しました。一人で進めていくのに限界を感じ、2024年1月からオンラインスクール「デザスタ」でコーディング・Webデザインを学びました。現在はWebデザイナーを目指して転職活動中です。今までお客様と近い距離で関わるお仕事をしておりました。そこで培った傾聴力を生かして様々な可能性を見出し、見る方々の印象に残るようなものを作っていきたいです。</p>
             </div>
-            <p class="about__under--text">作る側に興味を持ち、2023年夏頃からプログラミングの勉強を開始しました。一人で進めていくのに限界を感じ、2024年1月からオンラインスクール「デザスタ」でコーディング・Webデザインを学びました。現在はWebデザイナーを目指して転職活動中です。今までお客様と近い距離で関わるお仕事をしておりました。そこで培った傾聴力を生かして様々な可能性を見出し、見る方々の印象に残るようなものを作っていきたいです。</p>
         </div>
     </div>
     <div class="biography scroll_container">
@@ -95,49 +98,53 @@
             </div>
         </div>
     </div>
-    <div class="skill">
-        <h2>Skill</h2>
-        <div class="skill__all">
-            <div class="skill__design">
-                <p class="skill__title">Design</p>
-                <img src="./images/about_skill_design.png" alt="デザイン写真">
-                <p class="skill__text">
-                    目的や世界観に合ったデザインを心掛けております。<br>
-                    ＜使用できるツール＞<br>
-                    illustrator / photoshop
-                </p>
-            </div>
-            <div class="skill__coding">
-                <p class="skill__title">Coding</p>
-                <img src="./images/about_skill_coding.png" alt="コーディング写真">
-                <p class="skill__text">
-                    HTML/CSS/jQueryで見やすいサイトを作成できます。<br>
-                    ＜使用できる言語・ツール＞<br>
-                    HTML / CSS / jQuery / VSCode / Github
-                </p>
+    <div data-aos="fade-up" data-aos-duration="3000">
+        <div class="skill">
+            <h2>Skill</h2>
+            <div class="skill__all">
+                <div class="skill__design">
+                    <p class="skill__title">Design</p>
+                    <img src="./images/about_skill_design.png" alt="デザイン写真">
+                    <p class="skill__text">
+                        目的や世界観に合ったデザインを心掛けております。<br>
+                        ＜使用できるツール＞<br>
+                        illustrator / photoshop
+                    </p>
+                </div>
+                <div class="skill__coding">
+                    <p class="skill__title">Coding</p>
+                    <img src="./images/about_skill_coding.png" alt="コーディング写真">
+                    <p class="skill__text">
+                        HTML/CSS/jQueryで見やすいサイトを作成できます。<br>
+                        ＜使用できる言語・ツール＞<br>
+                        HTML / CSS / jQuery / VSCode / Github
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-    <div class="interest">
-        <h2>Interest</h2>
-        <ul class="interest__list">
-            <li class="interest__item">
-                <p class="interest__title">01.漫画・アニメ鑑賞</p>
-                <p class="interest__text">小さい頃から周りの影響で漫画やアニメが大好きでした。特にバトル、ダークファンタジー、ホラー漫画をよく読みます。休みの日は漫画やアニメに触れている時間が長く、原画展等イベントが開催されれば必ず足を運んでいます。</p>
-            </li>
-        </ul>
-        <ul class="interest__list">
-            <li class="interest__item">
-                <p class="interest__title">02.コスプレ</p>
-                <p class="interest__text">ハロウィンで友人と漫画のキャラクターのコスプレをしたことをきっかけに趣味でもやるようになりました。今は完全に趣味の範囲内でやっていますが、今後イベント等に参加しても楽しそうだなと夢を膨らませています。</p>
-            </li>
-        </ul>
-        <ul class="interest__list3">
-            <li class="interest__item">
-                <p class="interest__title">03.カラオケ</p>
-                <p class="interest__text">一人で5～6時間カラオケに行くくらい歌うことが大好きです。思い切ってカラオケ大会にも何度か出場したことがあり、非常に良い経験となっています。今は採点機能で高得点をとれるよう日々励んでいます。</p>
-            </li>
-        </ul>
+    <div data-aos="fade-up" data-aos-duration="3000">
+        <div class="interest">
+            <h2>Interest</h2>
+            <ul class="interest__list">
+                <li class="interest__item">
+                    <p class="interest__title">01.漫画・アニメ鑑賞</p>
+                    <p class="interest__text">小さい頃から周りの影響で漫画やアニメが大好きでした。特にバトル、ダークファンタジー、ホラー漫画をよく読みます。休みの日は漫画やアニメに触れている時間が長く、原画展等イベントが開催されれば必ず足を運んでいます。</p>
+                </li>
+            </ul>
+            <ul class="interest__list">
+                <li class="interest__item">
+                    <p class="interest__title">02.コスプレ</p>
+                    <p class="interest__text">ハロウィンで友人と漫画のキャラクターのコスプレをしたことをきっかけに趣味でもやるようになりました。今は完全に趣味の範囲内でやっていますが、今後イベント等に参加しても楽しそうだなと夢を膨らませています。</p>
+                </li>
+            </ul>
+            <ul class="interest__list3">
+                <li class="interest__item">
+                    <p class="interest__title">03.カラオケ</p>
+                    <p class="interest__text">一人で5～6時間カラオケに行くくらい歌うことが大好きです。思い切ってカラオケ大会にも何度か出場したことがあり、非常に良い経験となっています。今は採点機能で高得点をとれるよう日々励んでいます。</p>
+                </li>
+            </ul>
+        </div>
     </div>
     <div class="footer">
         <p class="footer__logo">
@@ -183,6 +190,13 @@
                     invalidateOnRefresh:true,
                 },
             });
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        $(document).ready(function() {
+            AOS.init();
         });
     </script>
 </body>

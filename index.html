@@ -7,232 +7,316 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 </head>
 <body>
-    <header id="header">
-        <div class="header__inner">
-            <h1>
-                <a href="./index.html">Murakami Yuua</a>
-            </h1>
-            <nav class="header__nav">
+    <div class="loading">
+        <div class="loading-bg">
+            <p>
+                <span class="slide-in leftAnime">
+                    <span class="slide-in_inner leftAnimeInner">Murakami Yuua</span>
+                </span>
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <header id="header">
+            <div class="header__inner">
+                <h1>
+                    <a href="./index.html">Murakami Yuua</a>
+                </h1>
+                <nav class="header__nav">
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#works">Works</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="hamburger">
+                <span class="hamburger__menu">Menu</span>
+                <span class="hamburger__close">Close</span>
+                <span></span>
+            </div>
+            <nav class="header__nav--sp">
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#works">Works</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+            <p class="catch__copy">
+                <span>デザインには正解がない<br></span>
+                <span>だからこそ可能性は無限大<br></span>
+                <span>沢山の可能性を模索し、<br></span>
+                <span>一緒に良いものを作り上げます。<br></span>
+            </p>
+            <picture>
+                <source srcset="./images/mainvisual-sp.png" media="(max-width:767px)">
+                <img src="./images/mainvisual.png" alt="波打ち際の写真">
+            </picture>
+        </header>
+        <div data-aos="fade-up" data-aos-duration="3000">
+            <section id="about">
+                <h2>About</h2>
+                <div class="about__profile">
+                    <div class="profile__picture">
+                        <img src="./images/about-profile1.png" alt="プロフィール写真">
+                    </div>
+                    <div class="profile">
+                        <div class="profile__all">
+                            <p class="profile__name">村上友愛</p>
+                            <p class="profile__name--en">Yuua Murakami</p>
+                        </div>
+                        <p class="profile__text">1998年7月、札幌出身。4年制大学卒業後、東京にて2年間受付業務に従事。2023年春頃に札幌へ戻り、同年8月にプログラミングの勉強を始める。2024年1月、オンラインスクール「デザスタ」に入学、コーディング・webデザインについて学ぶ。趣味は漫画・アニメ鑑賞、コスプレ、カラオケ。</p>
+                        <a class="view__more" href="./about.html">
+                            <p>view more</p>
+                            <img src="./images/arrow.png" alt="矢印">
+                        </a>
+                    </div>
+                </div>
+            </section>
         </div>
-        <div class="hamburger">
-            <span class="hamburger__menu">Menu</span>
-            <span class="hamburger__close">Close</span>
-            <span></span>
+        <section id="works">
+            <div data-aos="fade-up" data-aos-duration="3000">
+                <h2>Works</h2>
+            </div>
+            <div data-aos="fade-right" data-aos-duration="3000">
+                <div class="works01">
+                    <div class="works01__picture">
+                        <img src="./images/works1.png" alt="スマホプラン広告">
+                    </div>
+                    <div class="works01__text">
+                        <p class="works01__banner">Banner</p>
+                        <p class="works01__title">01.スマホプラン広告</p>
+                        <a class="arrow__works--left" href="./works/works1.html">
+                            <img src="./images/arrow-left.png" alt="矢印">
+                            <p>view more</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="3000">
+                <div class="works01__sp">
+                    <div class="works01__picture">
+                        <img src="./images/works1.png" alt="スマホプラン広告">
+                    </div>
+                    <a class="works01__title" href="./works/works1.html">01.スマホプラン広告</a>
+                </div>
+            </div>
+            <div data-aos="fade-left" data-aos-duration="3000">
+                <div class="works02">
+                    <div class="works02__text">
+                        <p class="works02__banner">Banner</p>
+                        <p class="works02__title">02.旅行支援アプリ広告</p>
+                        <a class="arrow__works--right" href="./works/works2.html">
+                            <p>view more</p>
+                            <img src="./images/arrow.png" alt="矢印">
+                        </a>
+                    </div>
+                    <div class="works02__picture">
+                        <img src="./images/works2.png" alt="旅行支援アプリ広告">
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="3000">
+                <div class="works01__sp">
+                    <div class="works01__picture">
+                        <img src="./images/works2.png" alt="旅行支援アプリ広告">
+                    </div>
+                    <a class="works01__title" href="./works/works2.html">02.旅行支援アプリ広告</a>
+                </div>
+            </div>
+            <div data-aos="fade-right" data-aos-duration="3000">
+                <div class="works03">
+                    <div class="works03__picture">
+                        <img src="./images/works3.png" alt="ハンバーガー広告">
+                    </div>
+                    <div class="works03__text">
+                        <p class="works03__banner">Banner</p>
+                        <p class="works03__title">03.ハンバーガー広告</p>
+                        <a class="arrow__works--left" href="./works/works3.html">
+                            <img src="./images/arrow-left.png" alt="矢印">
+                            <p>view more</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="3000">
+                <div class="works01__sp">
+                    <div class="works02__picture">
+                        <img src="./images/works3.png" alt="ハンバーガー広告">
+                    </div>
+                    <a class="works01__title" href="./works/works3.html">03.ハンバーガー広告</a>
+                </div>
+            </div>
+            <div data-aos="fade-left" data-aos-duration="3000">
+                <div class="works04">
+                    <div class="works04__text">
+                        <p class="works04__website">Web site</p>
+                        <p class="works04__title">04.コワーキングスペースWebサイト</p>
+                        <a class="arrow__works--right" href="./works/works4.html">
+                            <p>view more</p>
+                            <img src="./images/arrow.png" alt="矢印">
+                        </a>
+                    </div>
+                    <div class="works04__picture">
+                        <img src="./images/works4.png" alt="コワーキングスペースウェブサイト">
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="3000">
+                <div class="works01__sp">
+                    <div class="works03__picture">
+                        <img src="./images/works4.png" alt="コワーキングスペースウェブサイト">
+                    </div>
+                    <a class="works01__title" href="./works/works4.html">04.コワーキングスペースWebサイト</a>
+                </div>
+            </div>
+            <div data-aos="fade-right" data-aos-duration="3000">
+                <div class="works05">
+                    <div class="works05__picture">
+                        <img src="./images/works5.png" alt="美容室ウェブサイト">
+                    </div>
+                    <div class="works05__text">
+                        <p class="works05__website">Web site</p>
+                        <p class="works05__title">05.美容室Webサイト</p>
+                        <a class="arrow__works--left" href="./works/works5.html">
+                            <img src="./images/arrow-left.png" alt="矢印">
+                            <p>view more</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="3000">
+                <div class="works01__sp">
+                    <div class="works03__picture">
+                        <img src="./images/works5.png" alt="美容室ウェブサイト">
+                    </div>
+                    <a class="works01__title" href="./works/works5.html">05.美容室Webサイト</a>
+                </div>
+            </div>
+            <div data-aos="fade-left" data-aos-duration="3000">
+                <div class="works06">
+                    <div class="works06__text">
+                        <p class="works06__website">Web site</p>
+                        <p class="works06__title">06.CafeWebサイト</p>
+                        <a class="arrow__works--right" href="./works/works6.html">
+                            <p>view more</p>
+                            <img src="./images/arrow.png" alt="矢印">
+                        </a>
+                    </div>
+                    <div class="works06__picture">
+                        <img src="./images/works6.png" alt="カフェウェブサイト">
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="3000">
+                <div class="works01__sp">
+                    <div class="works03__picture">
+                        <img src="./images/works6.png" alt="カフェウェブサイト">
+                    </div>
+                    <a class="works01__title" href="./works/works6.html">06.CafeWebサイト</a>
+                </div>
+            </div>
+        </section>
+        <div data-aos="fade-up" data-aos-duration="3000">
+            <section id="contact">
+                <h2>Contact</h2>
+                <p class="contact__word">ご依頼やご相談等<wbr>お気軽にお問い合わせ下さいませ。</p>
+                <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSejJQQ-kNL3mkt2gyGemF4zzasdZ8dToX45oV3KxoykhoeUIQ/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;" class="c-form">
+                    <div class="c-form__item">
+                        <label class="c-form__label" for="field-name">Name<span class="c-form__required"></span></label>
+                        <input
+                            name="entry.295522153"
+                            class="c-form__input"
+                            id="field-name"
+                            type="text"
+                            required="required"
+                        />
+                    </div>
+                    <div class="c-form__item">
+                        <label class="c-form__label" for="field-mail">Mail Adress<span class="c-form__required"></span></label>
+                        <input
+                            name="entry.959134782"
+                            class="c-form__input"
+                            id="field-mail"
+                            type="email"
+                            required="required"
+                        />
+                    </div>
+                    <div class="c-form__item">
+                        <label class="c-form__label" for="field-message">Message<span class="c-form__required"></span></label>
+                        <textarea
+                            name="entry.1279093345"
+                            class="c-form__input"
+                            id="field-message"
+                            required="required"
+                        ></textarea>
+                    </div>
+                    <div class="c-form__submit">
+                        <button type="submit">送信</button>
+                    </div>
+                </form>
+            </section>
         </div>
-        <nav class="header__nav--sp">
+        <div class="footer">
+            <p class="footer__logo">
+                <a href="./index.html">Murakami Yuua</a>
+            </p>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#works">Works</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
-        <p>
-            デザインには正解がない<br>
-            だからこそ可能性は無限大<br>
-            沢山の可能性を模索し、<br>
-            一緒に良いものを作り上げます。
-        </p>
-        <picture>
-            <source srcset="./images/mainvisual-sp.png" media="(max-width:767px)">
-            <img src="./images/mainvisual.png" alt="波打ち際の写真">
-        </picture>
-    </header>
-    <section id="about">
-        <h2>About</h2>
-        <div class="about__profile">
-            <div class="profile__picture">
-                <img src="./images/about-profile1.png" alt="プロフィール写真">
-            </div>
-            <div class="profile">
-                <div class="profile__all">
-                    <p class="profile__name">村上友愛</p>
-                    <p class="profile__name--en">Yuua Murakami</p>
-                </div>
-                <p class="profile__text">1998年7月、札幌出身。4年制大学卒業後、東京にて2年間受付業務に従事。2023年春頃に札幌へ戻り、同年8月にプログラミングの勉強を始める。2024年1月、オンラインスクール「デザスタ」に入学、コーディング・webデザインについて学ぶ。趣味は漫画・アニメ鑑賞、コスプレ、カラオケ。</p>
-                <a class="view__more" href="./about.html">
-                    <p>view more</p>
-                    <img src="./images/arrow.png" alt="矢印">
-                </a>
-            </div>
+            <p class="footer__copyright">© 2024 Murakami Yuua All Rights Reserved.</p>
         </div>
-    </section>
-    <section id="works">
-        <h2>Works</h2>
-        <div class="works01">
-            <div class="works01__picture">
-                <img src="./images/works1.png" alt="スマホプラン広告">
-            </div>
-            <div class="works01__text">
-                <p class="works01__banner">Banner</p>
-                <p class="works01__title">01.スマホプラン広告</p>
-                <a class="arrow__works--left" href="./works/works1.html">
-                    <img src="./images/arrow-left.png" alt="矢印">
-                    <p>view more</p>
-                </a>
-            </div>
+        <div class="top">
+            <a href="./index.html">Back to top</a>
         </div>
-        <div class="works01__sp">
-            <div class="works01__picture">
-                <img src="./images/works1.png" alt="スマホプラン広告">
-            </div>
-            <a class="works01__title" href="./works/works1.html">01.スマホプラン広告</a>
-        </div>
-        <div class="works02">
-            <div class="works02__text">
-                <p class="works02__banner">Banner</p>
-                <p class="works02__title">02.旅行支援アプリ広告</p>
-                <a class="arrow__works--right" href="./works/works2.html">
-                    <p>view more</p>
-                    <img src="./images/arrow.png" alt="矢印">
-                </a>
-            </div>
-            <div class="works02__picture">
-                <img src="./images/works2.png" alt="旅行支援アプリ広告">
-            </div>
-        </div>
-        <div class="works01__sp">
-            <div class="works01__picture">
-                <img src="./images/works2.png" alt="旅行支援アプリ広告">
-            </div>
-            <a class="works01__title" href="./works/works2.html">02.旅行支援アプリ広告</a>
-        </div>
-        <div class="works03">
-            <div class="works03__picture">
-                <img src="./images/works3.png" alt="ハンバーガー広告">
-            </div>
-            <div class="works03__text">
-                <p class="works03__banner">Banner</p>
-                <p class="works03__title">03.ハンバーガー広告</p>
-                <a class="arrow__works--left" href="./works/works3.html">
-                    <img src="./images/arrow-left.png" alt="矢印">
-                    <p>view more</p>
-                </a>
-            </div>
-        </div>
-        <div class="works01__sp">
-            <div class="works02__picture">
-                <img src="./images/works3.png" alt="ハンバーガー広告">
-            </div>
-            <a class="works01__title" href="./works/works3.html">03.ハンバーガー広告</a>
-        </div>
-        <div class="works04">
-            <div class="works04__text">
-                <p class="works04__website">Web site</p>
-                <p class="works04__title">04.コワーキングスペースWebサイト</p>
-                <a class="arrow__works--right" href="./works/works4.html">
-                    <p>view more</p>
-                    <img src="./images/arrow.png" alt="矢印">
-                </a>
-            </div>
-            <div class="works04__picture">
-                <img src="./images/works4.png" alt="コワーキングスペースウェブサイト">
-            </div>
-        </div>
-        <div class="works01__sp">
-            <div class="works03__picture">
-                <img src="./images/works4.png" alt="コワーキングスペースウェブサイト">
-            </div>
-            <a class="works01__title" href="./works/works4.html">04.コワーキングスペースWebサイト</a>
-        </div>
-        <div class="works05">
-            <div class="works05__picture">
-                <img src="./images/works5.png" alt="美容室ウェブサイト">
-            </div>
-            <div class="works05__text">
-                <p class="works05__website">Web site</p>
-                <p class="works05__title">05.美容室Webサイト</p>
-                <a class="arrow__works--left" href="./works/works5.html">
-                    <img src="./images/arrow-left.png" alt="矢印">
-                    <p>view more</p>
-                </a>
-            </div>
-        </div>
-        <div class="works01__sp">
-            <div class="works03__picture">
-                <img src="./images/works5.png" alt="美容室ウェブサイト">
-            </div>
-            <a class="works01__title" href="./works/works5.html">05.美容室Webサイト</a>
-        </div>
-        <div class="works06">
-            <div class="works06__text">
-                <p class="works06__website">Web site</p>
-                <p class="works06__title">06.CafeWebサイト</p>
-                <a class="arrow__works--right" href="./works/works6.html">
-                    <p>view more</p>
-                    <img src="./images/arrow.png" alt="矢印">
-                </a>
-            </div>
-            <div class="works06__picture">
-                <img src="./images/works6.png" alt="カフェウェブサイト">
-            </div>
-        </div>
-        <div class="works01__sp">
-            <div class="works03__picture">
-                <img src="./images/works6.png" alt="カフェウェブサイト">
-            </div>
-            <a class="works01__title" href="./works/works6.html">06.CafeWebサイト</a>
-        </div>
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p class="contact__word">ご依頼やご相談等<wbr>お気軽にお問い合わせ下さいませ。</p>
-        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSejJQQ-kNL3mkt2gyGemF4zzasdZ8dToX45oV3KxoykhoeUIQ/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;" class="c-form">
-            <div class="c-form__item">
-                <label class="c-form__label" for="field-name">Name<span class="c-form__required"></span></label>
-                <input
-                    name="entry.295522153"
-                    class="c-form__input"
-                    id="field-name"
-                    type="text"
-                    required="required"
-                />
-            </div>
-            <div class="c-form__item">
-                <label class="c-form__label" for="field-mail">Mail Adress<span class="c-form__required"></span></label>
-                <input
-                    name="entry.959134782"
-                    class="c-form__input"
-                    id="field-mail"
-                    type="email"
-                    required="required"
-                />
-            </div>
-            <div class="c-form__item">
-                <label class="c-form__label" for="field-message">Message<span class="c-form__required"></span></label>
-                <textarea
-                    name="entry.1279093345"
-                    class="c-form__input"
-                    id="field-message"
-                    required="required"
-                ></textarea>
-            </div>
-            <div class="c-form__submit">
-                <button type="submit">送信</button>
-            </div>
-        </form>
-    </section>
-    <div class="footer">
-        <p class="footer__logo">
-            <a href="./index.html">Murakami Yuua</a>
-        </p>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#works">Works</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <p class="footer__copyright">© 2024 Murakami Yuua All Rights Reserved.</p>
     </div>
-    <div class="top">
-        <a href="./index.html">Back to top</a>
-    </div>
+
+    <script>
+        function slideAnime() {
+            $(".leftAnime").each(function () {
+                var elemPos = $(this).offset().top - 50;
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                if (scroll >= elemPos - windowHeight) {
+                    $(this).addClass("slideAnimeLeftRight");
+                    $(this).children(".leftAnimeInner").addClass("slideAnimeRightLeft");
+                } else {
+                    $(this).removeClass("slideAnimeLeftRight");
+                    $(this)
+                        .children(".leftAnimeInner")
+                        .removeClass("slideAnimeRightLeft");
+                }
+            });
+        }
+        $(window).scroll(function () {
+            slideAnime();
+        });
+        $(window).on("load", function () {
+            slideAnime();
+        });
+        window.addEventListener('load', function() {
+            document.getElementById('page-loader').style.display = 'none';
+        });
+        const webStorage = function () {
+            if (sessionStorage.getItem("visit")) {
+                $(".loading").css("display", "none");
+                $(".container").css("opacity", "1");
+            } else {
+                sessionStorage.setItem("visit", "true");
+                $(".loading")
+                    .delay(5500)
+                    .fadeOut(function () {
+                    $("body").addClass("appear");
+                });
+            }
+        };
+        webStorage();
+    </script>
 
     <script type="text/javascript">
         let submitted = false;
@@ -249,6 +333,13 @@
                 $(".hamburger").toggleClass("open");
                 $(".header__nav--sp").fadeToggle();
             });
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        $(document).ready(function(){
+            AOS.init();
         });
     </script>
 </body>
