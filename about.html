@@ -6,11 +6,12 @@
     <title>PORTFOLIO</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/ScrollTrigger.min.js" defer></script>
     <script src="./js/script.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </head>
 <body>
     <header id="header">
@@ -163,14 +164,24 @@
 
     <script>
         $(function(){
-            $(".hamburger").on("click",function(){
+            $(".hamburger, .header__nav--sp, .header__nav--sp a").on("click",function(){
                 $(".hamburger").toggleClass("open");
                 $(".header__nav--sp").fadeToggle();
             });
-        });
-    </script>
-    <script>
-        $(document).ready(function() {
+
+            AOS.init();
+
+            var $pageTop=$(".top");
+            $pageTop.on("click",function(){
+                $("body,html").animate(
+                    {
+                        scrollTop:0,
+                    },
+                    300
+                );
+                return false;
+            });
+
             var $listWrapperEl=$(".sticky_wrap");
             var $listEl=$(".horizontal_scroll");
             gsap.to($listEl, {
@@ -190,13 +201,6 @@
                     invalidateOnRefresh:true,
                 },
             });
-        });
-    </script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        $(document).ready(function() {
-            AOS.init();
         });
     </script>
 </body>

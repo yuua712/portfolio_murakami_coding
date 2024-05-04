@@ -6,8 +6,9 @@
     <title>PORTFOLIO</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="../css/lightbox.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../js/lightbox.min.js"></script>
 </head>
 <body>
     <header id="header">
@@ -126,33 +127,23 @@
         <a href="../works/works6.html">Back to top</a>
     </div>
 
-    <script src="../js/lightbox.min.js"></script>
-
     <script>
         $(function(){
-            $(".hamburger").on("click",function(){
+            $(".hamburger, .header__nav--sp, .header__nav--sp a").on("click",function(){
                 $(".hamburger").toggleClass("open");
                 $(".header__nav--sp").fadeToggle();
             });
-        });
-    </script>
 
-    <script>
-        const images = document.querySelectorAll('.img-wrap');
-        const animationClassName = 'img-animation';
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add(animationClassName);
-                } else {
-                    entry.target.classList.remove(animationClassName);
-                }
+            var $pageTop=$(".top");
+            $pageTop.on("click",function(){
+                $("body,html").animate(
+                    {
+                        scrollTop:0,
+                    },
+                    300
+                );
+                return false;
             });
-        });
-
-        images.forEach((image) => {
-            observer.observe(image);
         });
     </script>
 </body>

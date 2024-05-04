@@ -48,13 +48,10 @@
         </ul>
         <p class="footer__copyright">© 2024 Murakami Yuua All Rights Reserved.</p>
     </div>
-    <div class="top">
-        <a href="./contact.html">Back to top</a>
-    </div>
 
     <script>
         $(function(){
-            $(".hamburger").on("click",function(){
+            $(".hamburger, .header__nav--sp, .header__nav--sp a").on("click",function(){
                 $(".hamburger").toggleClass("open");
                 $(".header__nav--sp").fadeToggle();
             });
