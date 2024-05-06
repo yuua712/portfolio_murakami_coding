@@ -138,7 +138,7 @@ body {
 .catch__copy {
     position: absolute;
     padding-top: 250px;
-    padding-left: 180px;
+    padding-left: 150px;
     font-size: 30px;
     line-height: 2.3;
     letter-spacing: 0.4em;
@@ -193,15 +193,16 @@ body {
 
 .about__profile {
     display: flex;
-}
-
-.profile__picture img {
-    width: 465px;
+    align-items: center;
 }
 
 .profile {
     padding-left: 40px;
-    padding-top: 45px;
+    width: 50%;
+}
+
+.profile__picture {
+    width: 50%;
 }
 
 .profile__name {
@@ -921,19 +922,30 @@ form textarea:focus {
     display: block;
 } 
 
-.img-wrap {
-    animation: img-wrap 2s cubic-bezier(0.4, 0, 0.2, 1);
+.sample {
+    overflow: hidden;
+    position: relative;
 }
 
-@keyframes img-wrap {
+.sample img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.sample-one.sample-animation img {
+    animation: sample-one 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes sample-one {
     0% {
-        clip-path: circle(0 at 50% 50%);
-        -webkit-clip-path: circle(0 at 50% 50%);
+        opacity: 0;
+        transform: scale(1.2) translateY(24px);
     }
 
-    100% {
-        clip-path: circle(100% at 50% 50%);
-        -webkit-clip-path: circle(100% at 50% 50%);
+    32% {
+        opacity: 0;
+        transform: scale(1.2) translateY(24px);
     }
 }
 
@@ -993,7 +1005,7 @@ form textarea:focus {
 }
 
 .works__under--img {
-    width: 85%;
+    width: 70%;
     padding-top: 250px;
     display: block;
     margin: 0 auto;
@@ -1025,6 +1037,12 @@ form textarea:focus {
     display: none;
 }
 
+@media screen and (max-width:1100px) {
+    .catch__copy {
+        font-size: 20px;
+    }
+} 
+
 @media screen and (max-width:767px) {
     /* -------------------index.html-------------------------- */
     .header__nav {
@@ -1033,6 +1051,11 @@ form textarea:focus {
     .header__inner {
         padding-top: 20px;
         z-index: 9999;
+    }
+    .header__inner a {
+        background: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
     .header__inner h1 {
         font-size: 22px;
@@ -1046,8 +1069,7 @@ form textarea:focus {
     }
     .hamburger {
         display: block;
-        width: 40px;
-        height: 20px;
+        width: 50px;
         position: fixed;
         top: 20px;
         right: 20px;
@@ -1056,7 +1078,7 @@ form textarea:focus {
     }
     .hamburger__menu {
         position: fixed;
-        font-size: 14px;
+        font-size: 18px;
         font-family: "myfont",serif;
         text-align: center;
         top: 30px;
@@ -1064,7 +1086,7 @@ form textarea:focus {
     .hamburger span {
         position: fixed;
         content: "";
-        width: 40px;
+        width: 50px;
         height: 1px;
         background-color: #fff;
         top: 20px;
@@ -1072,10 +1094,10 @@ form textarea:focus {
     .hamburger span::before {
         position: fixed;
         content: "";
-        width: 40px;
+        width: 50px;
         height: 1px;
         background-color: #fff;
-        top: 41px;
+        top: 45px;
         right: 20px;
     }
     .hamburger__close {
@@ -1084,7 +1106,7 @@ form textarea:focus {
     .open .hamburger__close {
         display: block;
         position: fixed;
-        font-size: 14px;
+        font-size: 18px;
         font-family: "myfont",serif;
         text-align: center;
     }
@@ -1096,7 +1118,7 @@ form textarea:focus {
         z-index: 9998;
         width: 100%;
         height: 100vh;
-        background-color: #000000ef;
+        background-color: #000000f1;
     }
     .header__nav--sp ul {
         display: flex;
@@ -1109,6 +1131,11 @@ form textarea:focus {
         line-height: 4;
         font-size: 25px;
         font-family: "myfont",serif;
+    }
+    .header__nav--sp a {
+        background: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     /* about */
@@ -1127,16 +1154,26 @@ form textarea:focus {
     .about__profile {
         flex-direction: column;
     }
-    .profile__picture img {
+    .profile__picture {
         width: 80%;
+    }
+    .profile__picture img {
         display: block;
         margin: 0 auto;
     }
     .profile__text {
         font-size: 14px;
     }
+    .profile__all {
+        padding-top: 30px;
+    }
     .view__more {
         padding-top: 50px;
+        background: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border-bottom: 1px solid;
+        border-image: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%)1;
     }
     .view__more p {
         font-size: 18px;
@@ -1174,9 +1211,6 @@ form textarea:focus {
         display: table;
         margin: 0 auto;
         padding-top: 10px;
-    }
-    .works01__title:hover {
-        background: rgb(203,155,116);
         background: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -1221,6 +1255,11 @@ form textarea:focus {
     }
     .c-form__submit button {
         padding: 5px 60px;
+        background: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border: 2px solid;
+        border-image: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%)1;
     }
 
     /* footer */
@@ -1229,7 +1268,10 @@ form textarea:focus {
         margin: 0 auto;
     }
     .footer__logo a {
-        font-size: 16px;
+        font-size: 18px;
+        background: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
     .footer ul {
         display: none;
@@ -1242,6 +1284,11 @@ form textarea:focus {
         padding: 5px 10px;
         right: 10px;
         bottom: 10px;
+        background: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border: 1px solid;
+        border-image: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%)1;
     }
 
     /* -------------------about.html-------------------------- */
@@ -1409,13 +1456,9 @@ form textarea:focus {
         border: 1px solid #fff;
         padding: 5px 30px;
         margin: 0 9px;
-    }
-    .modal a:hover {
-        background: rgb(203,155,116);
         background: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        border-bottom: 1px solid;
         border-image: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%)1;
     }
     .lb-data .lb-number {

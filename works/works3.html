@@ -27,7 +27,6 @@
         <div class="hamburger">
             <span class="hamburger__menu">Menu</span>
             <span class="hamburger__close">Close</span>
-            <span></span>
         </div>
         <nav class="header__nav--sp">
             <ul>
@@ -101,7 +100,7 @@
             <a href="../images/works3_under_luxury.png" data-lightbox="image-1" data-alt="ハンバーガー広告">高級感verはこちら</a>
             <a href="../images/works3_under_pop.png" data-lightbox="image-1" data-alt="ハンバーガー広告">POPverはこちら</a>
         </div>
-        <div class="img-wrap">
+        <div class="sample sample-one">
             <div class="works__img--burger">
                 <img class="img__luxury" src="../images/works3_under_luxury.png" alt="ハンバーガー広告">
                 <img class="img__pop" src="../images/works3_under_pop.png" alt="ハンバーガー広告">
@@ -143,6 +142,22 @@
                     300
                 );
                 return false;
+            });
+
+            const images = document.querySelectorAll('.sample');
+            const imageClassName = 'sample-animation';
+
+            const imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add(imageClassName);
+                        imageObserver.unobserve(entry.target);
+                    }
+                });
+            });
+
+            images.forEach((image) => {
+                imageObserver.observe(image);
             });
         });
     </script>

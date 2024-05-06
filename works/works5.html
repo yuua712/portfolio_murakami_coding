@@ -27,7 +27,6 @@
         <div class="hamburger">
             <span class="hamburger__menu">Menu</span>
             <span class="hamburger__close">Close</span>
-            <span></span>
         </div>
         <nav class="header__nav--sp">
             <ul>
@@ -100,7 +99,7 @@
         <div class="modal">
             <a href="../images/works5_under_pc-100.jpg" data-lightbox="image-1" data-alt="美容室ウェブサイト">PC版はこちら</a>
         </div>
-        <div class="img-wrap">
+        <div class="sample sample-one">
             <img class="works__web5--pc" src="../images/works5_under_pc-100.jpg" alt="美容室ウェブサイト">
         </div>
         <a class="other__works" href="../index.html#works">
@@ -139,6 +138,22 @@
                     300
                 );
                 return false;
+            });
+
+            const images = document.querySelectorAll('.sample');
+            const imageClassName = 'sample-animation';
+
+            const imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add(imageClassName);
+                        imageObserver.unobserve(entry.target);
+                    }
+                });
+            });
+
+            images.forEach((image) => {
+                imageObserver.observe(image);
             });
         });
     </script>
