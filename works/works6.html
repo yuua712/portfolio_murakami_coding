@@ -100,7 +100,7 @@
             <a href="../images/works6_under_pc-100.jpg" data-lightbox="image-1" data-alt="デザインカフェウェブサイト">PC版はこちら</a>
             <a href="../images/works6_under_sp-100.jpg" data-lightbox="image-1" data-alt="デザインカフェウェブサイト">SP版はこちら</a>
         </div>
-        <div class="sample sample-one">
+        <div class="img-wrap">
             <div class="works4__img">
                 <img class="works__web--pc" src="../images/works6_under_pc-100.jpg" alt="デザインカフェウェブサイト">
                 <img class="works__web--sp" src="../images/works6_under_sp-100.jpg" alt="デザインカフェウェブサイト">
@@ -144,20 +144,20 @@
                 return false;
             });
 
-            const images = document.querySelectorAll('.sample');
-            const imageClassName = 'sample-animation';
+            const images = document.querySelectorAll('.img-wrap');
+            const animationClassName = 'img-animation';
 
-            const imageObserver = new IntersectionObserver((entries) => {
+            const observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add(imageClassName);
-                        imageObserver.unobserve(entry.target);
+                        entry.target.classList.add(animationClassName);
+                        observer.unobserve(entry.target);
                     }
                 });
             });
 
             images.forEach((image) => {
-                imageObserver.observe(image);
+                observer.observe(image);
             });
         });
     </script>
