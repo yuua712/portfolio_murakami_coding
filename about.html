@@ -21,7 +21,7 @@
             </h1>
             <nav class="header__nav">
                 <ul>
-                    <li><a href="./index.html#about">About</a></li>
+                    <li><a href="./about.html">About</a></li>
                     <li><a href="./index.html#works">Works</a></li>
                     <li><a href="./index.html#contact">Contact</a></li>
                 </ul>
@@ -33,7 +33,7 @@
         </div>
         <nav class="header__nav--sp">
             <ul>
-                <li><a href="./index.html#about">About</a></li>
+                <li><a href="./about.html">About</a></li>
                 <li><a href="./index.html#works">Works</a></li>
                 <li><a href="./index.html#contact">Contact</a></li>
             </ul>
@@ -151,7 +151,7 @@
             <a href="./index.html">Murakami Yuua</a>
         </p>
         <ul>
-            <li><a href="./index.html#about">About</a></li>
+            <li><a href="./about.html">About</a></li>
             <li><a href="./index.html#works">Works</a></li>
             <li><a href="./index.html#contact">Contact</a></li>
         </ul>
@@ -179,6 +179,15 @@
                     300
                 );
                 return false;
+            });
+
+            $('.top').hide();
+            $(window).scroll(function(){
+                if($(this).scrollTop()>1000) {
+                    $('.top').fadeIn();
+                } else {
+                    $('.top').fadeOut();
+                }
             });
 
             var $listWrapperEl=$(".sticky_wrap");
