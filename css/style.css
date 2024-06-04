@@ -1055,7 +1055,7 @@ form textarea:focus {
     }
     .header__inner {
         padding-top: 20px;
-        z-index: 9999;
+        z-index: 9997;
     }
     .header__inner a {
         background: linear-gradient(90deg, rgba(203,155,116,1) 0%, rgba(255,255,255,1) 25%, rgba(203,155,116,1) 50%, rgba(255,255,255,1) 75%, rgba(203,155,116,1) 100%);
@@ -1078,7 +1078,7 @@ form textarea:focus {
         position: fixed;
         top: 20px;
         right: 20px;
-        z-index: 9999;
+        z-index: 9997;
         cursor: pointer;
     }
     .hamburger__menu {
